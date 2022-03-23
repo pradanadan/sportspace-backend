@@ -1,0 +1,36 @@
+.card-image{
+    height: 17vw;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.card-body{
+    margin: 0;
+    padding: 0.35em 0.25em!important;
+}
+
+.card-type, .card-city{
+    color: var(--grey-light);
+    font-weight: 600;
+    font-size: 0.75em;
+	text-transform: uppercase;
+}
+
+.card-title{
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 1em;
+    margin-bottom: 15px !important;
+    line-height: 1.15em;
+}
+
+.card-rate{
+    font-weight: 500;
+    font-size: 1.1em;
+    margin-bottom: 15px !important;
+}
+
+.card-address{
+    font-weight: 300;
+    font-size: 0.9em;
+}
