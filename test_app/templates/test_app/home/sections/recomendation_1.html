@@ -1,0 +1,26 @@
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'test_app/css/home_recommendation_1.css' %}">
+{% endblock %} 
+
+{% block content %}
+
+<div class="recommendation_available" loading="lazy">
+    {% if recomendation_1 %}
+    <div class="container my-5">
+        <h1>Masih Kosong Buat Weekends</h1>
+        <div class="row mt-4">
+            {% for court in recomendation_1 %}
+                <div class="col-6 col-md px-2">
+                    {% include "test_app/card.html" %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+        <p>Masih belum ada lapangannya nih</p>
+{% endif %}
+</div>
+
+
+{% endblock %}

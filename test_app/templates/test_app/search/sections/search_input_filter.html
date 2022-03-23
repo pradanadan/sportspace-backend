@@ -1,0 +1,35 @@
+{% load static %}
+
+{% block head %}
+{% endblock %} 
+
+{% block content %}
+
+    <div class="container" style="margin-top: 100px;">
+        <form action="/test/search/" method="get">
+            <div class="row">
+                <input type="text" name="key" placeholder="Cari Nama Tempat, Jenis Olahraga, Alamat" style="width: 75%" 
+                    {% if key %} value="{{ key }}" {% endif %}>
+            </div>
+            <div class="row">
+                <input type="date" name="date"
+                    {% if date %} value="{{ date }}" {% endif %}>
+                <input type="time" name="hour_start" placeholder="Dari"
+                    {% if hour_start %} value="{{ hour_start }}" {% endif %}>
+                <input type="time" name="hour_end" placeholder="Hingga"
+                    {% if hour_end %} value="{{ hour_end }}" {% endif %}>
+                
+                <input class="ml-5" type="number" name="rate" placeholder="Harga /jam Maks"
+                    {% if rate %} value="{{ rate }}" {% endif %}>
+            </div>
+
+            <input type="text" name="type" style="display: none"
+                {% if type %} value="{{ type }}" {% endif %}>
+
+            <div class="row"> 
+                <input type="submit" value="Search">
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

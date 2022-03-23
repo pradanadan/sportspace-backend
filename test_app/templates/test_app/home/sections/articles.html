@@ -1,0 +1,50 @@
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'test_app/css/button_lg.css' %}">
+<link rel="stylesheet" href="{% static 'test_app/css/home_article.css' %}">
+{% endblock %} 
+
+{% block content %}
+
+<div class="buttonlg-container" loading="lazy">
+    {% if articles %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4"> 
+                <img class="article-img" src="{{ articles.0.preview_img.url }}" alt="{{ articles.0.title }}"> 
+            </div>
+            <div class="col-8 mt-2">
+                <h5 class="text-justify">{{ articles.0.title }}</h4>
+                <p class="text-justify">{{ articles.0.preview_text }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3 mb-4">
+        <div class="row">
+            <div class="col-8 mt-2">
+                <h5 class="text-justify">{{ articles.1.title }}</h4>
+                <p class="text-justify">{{ articles.1.preview_text }}</p>
+            </div>
+            <div class="col-4"> 
+                <img class="article-img" src="{{ articles.1.preview_img.url }}" alt="{{ articles.0.title }}"> 
+            </div>
+        </div>
+    </div>
+    
+    {% endif %}
+    <a href="#" class="btn-link">
+        <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Baca Tips Lainnya
+    </a>
+
+    
+    
+</div>
+
+
+
+{% endblock %}

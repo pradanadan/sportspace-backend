@@ -1,0 +1,139 @@
+@import url("{% static 'main.css')");
+
+.sports_category_container {
+    margin: 50px 0;
+}
+
+.card-collection-container{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+    margin: 50px;
+}
+
+.card-collection-container .card-container{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    box-shadow: 10px 14px 22px 4px rgba(0,0,0,0.25);
+    border-radius: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-Left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+
+.card-container a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.card-content{
+    /* z-index: 999; */
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    transform: translateY(100px);
+    opacity: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.card-container a:hover {
+    text-decoration: none;
+}
+
+.card-container a:hover .card-content{
+    transform: translateY(0px);
+    opacity: 1;
+    overflow: hidden;
+}
+
+
+
+
+
+.card-futsal{
+    background: url(../images/card-futsal.jpg);  
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-badminton{
+    background: url(../images/card-badminton.jpg);
+    
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+.card-basket{
+    background: url(../images/card-basket.jpg); 
+    
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.card-sepakbola{
+    background: url(../images/card-sepakbola.jpg);   
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+.card-voli{
+    background: url(../images/card-voli.jpg);   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  
+}
+.card-tenis{
+    background: url(../images/card-tenis.jpg);   
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+.card-tenis-meja{
+    background: url(../images/card-tenismeja.jpg);   
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+.card-billiard{
+    background: url(../images/card-billiard.jpg);   
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+
+
+
+.sports_category_container h1 {
+    position: relative;
+    width: max-content;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2vw;
+}
+
+.sports_category_container h1::before{
+    content: "";
+    position: absolute;
+    height: .5em;
+    /* width: 17%; */
+    width: 2.3em;
+    left: calc(.5em * -1);
+    bottom: 0;
+    background: var(--main-color);
+    z-index: -1;
+}
+
+@media (max-width: 1040px){
+}
+
+@media (max-width: 560px){
+}

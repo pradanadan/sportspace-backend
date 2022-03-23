@@ -1,0 +1,9 @@
+<div class="container" style="margin-top: 100px;">
+    <form action="" enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+</div>

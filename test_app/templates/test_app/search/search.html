@@ -1,0 +1,22 @@
+{% extends 'test_app/base.html' %}
+{% load static %}
+
+{% block title %}
+    Category
+{% endblock %}
+
+{% block head%}
+{% endblock %}
+
+{% block content %}
+
+    <!-- Search Input & filter -->
+    {% include "test_app/search/sections/search_input_filter.html" %}
+
+    <!-- Search Results -->
+    {% include "test_app/search/sections/search_results.html" %}
+    
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'test_app/base.html' %}
+{% load static %}
+
+{% block title %}
+    Booking Court
+{% endblock %}
+
+{% block head%}
+{% endblock %}
+
+{% block content %}
+
+    <!-- Court Detail -->
+    {% include "test_app/court/sections/court_detail.html" %}
+
+    <!-- Date Input -->
+    {% include "test_app/court/sections/date_input.html" %}
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

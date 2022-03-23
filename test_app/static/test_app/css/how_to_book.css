@@ -1,0 +1,52 @@
+@import url("{% static 'main.css')");
+    .howtobook-container{
+        margin: 80px 50px 20px;
+    }
+    .howtobook-container h1 {
+        position: relative;
+        width: max-content;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2vw;
+    }
+    
+    .howtobook-container h1::before{
+        content: "";
+        position: absolute;
+        height: .5em;
+        /* width: 17%; */
+        width: 5em;
+        right: calc(6em);
+        bottom: 0;
+        background: var(--main-color);
+        z-index: -1;
+    }
+
+    .step-book-container{
+        margin: 20px 30px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .step-content{
+        margin: 10px 40px;
+        width: 200px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .step-content img{
+        height: 100px;
+        width: 100px;
+        margin-bottom: 20px;
+        transition: 0.5s ease;
+    }
+
+    .step-content img:hover{
+        transform: translateY(-20px);
+    }
