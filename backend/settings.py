@@ -89,20 +89,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+# Parse database configuration from $DATABASE_URL
+import dj_database_url
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': '1fivATN0vE',
-        'USER': '1fivATN0vE',
-        'PASSWORD': 'E5KzGD2Bzv',
-        'HOST': 'remotemysql.com',
-        'PORT': '3306',
-    }
-}
+DATABASES = { 'default' : dj_database_url.config(
+    default='mysql://1fivATN0vE:E5KzGD2Bzv@remotemysql.com:3306/1fivATN0vE',
+)}
+
 
 # User model
 
