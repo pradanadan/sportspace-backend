@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = 'django-insecure-n$gyyu*3319sii72d4^wse+0kqgz(np3s2c%x$yzdsjvt)1*y_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -94,10 +94,13 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 
-DATABASES = { 'default' : dj_database_url.config(
-    default='mysql://1fivATN0vE:E5KzGD2Bzv@remotemysql.com:3306/1fivATN0vE',
-)}
+DATABASES = { 'default' : dj_database_url.config()}
 
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+    }
+}
 
 # User model
 
