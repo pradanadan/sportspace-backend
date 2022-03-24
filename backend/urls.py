@@ -26,8 +26,7 @@ urlpatterns = [
     path('court/', include('court_app.urls')),
     path('booking/', include('booking_app.urls')),
     path('profile/', include('profile_app.urls')),
-    path('mybooking/', include('mybooking_app.urls')),
-    path('test/', include('test_app.urls')),
+    path('mybooking/', include('mybooking_app.urls'))
 ]
 
 if settings.DEBUG:
