@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'booking_app',
     'profile_app',
     'mybooking_app',
-    'test_app'
 ]
 
 MIDDLEWARE = [
