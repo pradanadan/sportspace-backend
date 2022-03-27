@@ -64,12 +64,16 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000', 
-    'https://sports-space.vercel.app/'
+    'https://sports-space.vercel.app'
 ]
 
 CORS_ALLOW_CREDENTIALS: True
 
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'https://backend-sport-space.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:3000', 
+    'https://backend-sport-space.herokuapp.com', 
+    'https://sports-space.vercel.app'
+]
 
 ROOT_URLCONF = 'backend.urls'
 
