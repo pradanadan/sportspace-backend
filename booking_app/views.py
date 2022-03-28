@@ -1,5 +1,4 @@
 import random
-import logging
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -9,8 +8,6 @@ from rest_framework.parsers import MultiPartParser, FormParser
 
 from library.models import Booking, Court, PaymentMethod, UserPartner, BookHoursDict, BookingHours, PaymentConfirm, BookingStatusCatalog
 from library.utils.send_notif import send_notif_admin
-
-logger = logging.getLogger('testlogger')
 
 class BookingView(APIView):
     def post(self, request, format=None):
@@ -59,8 +56,7 @@ class BookingView(APIView):
                 except:
                     return Response({"success": 0, "message" : "Something went wrong when assigning booking hours"})
 
-            except Exception as e:
-                logger.info(e)
+            except:
                 return Response({"success": 0, "message" : "Something went wrong when creating booking order"})
 
         except:
