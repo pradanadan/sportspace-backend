@@ -132,24 +132,6 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_ROOT = 'static'
-
-AWS_ACCESS_KEY_ID = '226AEB8A12F67C10D4A9'
-AWS_SECRET_ACCESS_KEY = 'GOdOzICqdRzm7F9gpdi9iNxcx6n0IQ9GMFHhEjR6'
-AWS_STORAGE_BUCKET_NAME = 'sport-space'
-AWS_S3_ENDPOINT_URL = 'https://s3.filebase.com'
-
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.filebase.com' % AWS_STORAGE_BUCKET_NAME
-
-AWS_LOCATION = 'static'
-
-STATICFILES_DORS = [
-	os.path.join(BASE_DIR, 'randomsite/static'),
-]
-
-STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -176,4 +158,4 @@ REST_FRAMEWORK = {
     ]
 }
 import django_on_heroku 
-django_on_heroku.settings(locals(), staticfiles=False, logging=False)
+django_on_heroku.settings(locals(), logging=False)
